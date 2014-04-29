@@ -1,5 +1,3 @@
-package Hausaufgaben;
-
 public class Teilnehmer {
 	private String teilnehmetName;
 	private String teihlnehmerEmail;
