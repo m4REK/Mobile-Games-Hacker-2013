@@ -34,10 +34,6 @@ public class Referenten {
 		return angebotenesWorkshop;
 	}
 
-	public void setAngebotenesWorkshop(ArrayList<Workshops> angebotenesWorkshop) {
-		this.angebotenesWorkshop = angebotenesWorkshop;
-	}
-
 	@Override
 	public String toString() {
 		return "Referent [" + getRefName() + ", " + getRefEmail() + ", "
