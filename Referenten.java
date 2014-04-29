@@ -1,25 +1,21 @@
-package Hausaufgaben;
+import java.util.ArrayList;
 
 public class Referenten {
 	private String refName;
 	private String refEmail;
 	private String refFirma;
-	private Workshops angebotenesWorkshop;
+	private ArrayList<Workshops> angebotenesWorkshop;
 
-	public Referenten(String name, String email, String firma,
-			Workshops angebotenesWorkshop) {
+	public Referenten(String name, String email, String firma) {
 		this.refName = name;
 		this.refEmail = email;
 		this.refFirma = firma;
-		this.angebotenesWorkshop = angebotenesWorkshop;
+		this.angebotenesWorkshop = new ArrayList<Workshops>();
+
 	}
 
-	public Workshops getAngebotenesWorkshop() {
-		return angebotenesWorkshop;
-	}
-
-	public void setAngebotenesWorkshop(Workshops angebotenesWorkshop) {
-		this.angebotenesWorkshop = angebotenesWorkshop;
+	public void addWorkshop(Workshops angebot) {
+		angebotenesWorkshop.add(angebot);
 	}
 
 	public String getRefName() {
@@ -34,10 +30,18 @@ public class Referenten {
 		return refFirma;
 	}
 
+	public ArrayList<Workshops> getAngebotenesWorkshop() {
+		return angebotenesWorkshop;
+	}
+
+	public void setAngebotenesWorkshop(ArrayList<Workshops> angebotenesWorkshop) {
+		this.angebotenesWorkshop = angebotenesWorkshop;
+	}
+
 	@Override
 	public String toString() {
 		return "Referent [" + getRefName() + ", " + getRefEmail() + ", "
-				+ getRefFirma() + ", " + angebotenesWorkshop + "]";
+				+ getRefFirma() + ", " + getAngebotenesWorkshop() + "]";
 	}
 
 }
