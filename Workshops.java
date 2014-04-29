@@ -1,5 +1,3 @@
-package Hausaufgaben;
-
 import java.util.ArrayList;
 
 public class Workshops {
